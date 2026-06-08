@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Coders Solution — Sitio web
 
-## Getting Started
+Sitio corporativo de **Coders Solution** (Partner Salesforce): home, servicios, ecosistema Salesforce, casos de éxito, blog y panel CMS.
 
-First, run the development server:
+Stack: **Next.js 16** (App Router), **React 19**, **Tailwind CSS v4**, **Framer Motion**.
+
+## Requisitos
+
+- Node.js **20.9+** (ver `.nvmrc`)
+- npm 10+
+
+## Desarrollo local
 
 ```bash
+npm install
+cp .env.example .env.local
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Variables de entorno
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Descripción | Obligatoria |
+|----------|-------------|-------------|
+| `ADMIN_PASSWORD` | Contraseña del panel `/admin` | Recomendada en producción |
+| `NEXT_PUBLIC_SITE_URL` | URL pública del sitio (sitemap, SEO, robots) | Recomendada |
 
-## Learn More
+Copia `.env.example` a `.env.local` y ajusta los valores.
 
-To learn more about Next.js, take a look at the following resources:
+## Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+| Comando | Descripción |
+|---------|-------------|
+| `npm run dev` | Servidor de desarrollo |
+| `npm run build` | Build de producción |
+| `npm run start` | Servir build local |
+| `npm run lint` | ESLint |
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Subir a GitHub
 
-## Deploy on Vercel
+```bash
+git init
+git add .
+git commit -m "Initial commit: Coders Solution website"
+git branch -M main
+git remote add origin https://github.com/TU-USUARIO/coders-solution.git
+git push -u origin main
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+> No subas `.env.local` ni secretos. Solo `.env.example` va al repositorio.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Despliegue en Netlify
+
+### Opción A — Desde GitHub (recomendada)
+
+1. Sube el repo a GitHub.
+2. En [Netlify](https://app.netlify.com): **Add new site → Import an existing project**.
+3. Conecta el repositorio.
+4. Netlify detecta `netlify.toml` automáticamente:
+   - **Build command:** `npm run build`
+   - **Plugin:** `@netlify/plugin-nextjs`
+   - **Node:** 20
+5. En **Site settings → Environment variables**, añade:
+   - `ADMIN_PASSWORD` — contraseña segura para `/admin`
+   - `NEXT_PUBLIC_SITE_URL` — p. ej. `https://tudominio.com`
+6. Deploy.
+
+### Opción B — Netlify CLI
+
+```bash
+npm install -g netlify-cli
+netlify login
+netlify init
+netlify deploy --prod
+```
+
+### Panel CMS en Netlify
+
+El blog usa `content/blog/posts.json` en el filesystem. En Netlify las **API routes son serverless** y los cambios del CMS **no persisten** entre despliegues (el disco es efímero).
+
+- **Lectura del blog:** funciona con normalidad.
+- **Crear/editar posts en `/admin`:** los cambios se pierden al redeploy. Para CMS en producción, migra a Supabase, Contentful, o commitea `posts.json` desde local.
+
+## Estructura principal
+
+```
+app/           Páginas y rutas (App Router)
+components/    UI reutilizable
+content/blog/  Posts del blog (JSON)
+data/          Datos estáticos (servicios, productos, casos)
+lib/           Utilidades (blog, auth)
+public/        Assets estáticos
+netlify.toml   Configuración de despliegue Netlify
+```
+
+## Rutas destacadas
+
+- `/` — Home
+- `/consulting`, `/implementation`, `/managed` — Servicios
+- `/solutions/[slug]` — Productos Salesforce
+- `/casos-de-exito` — Casos de éxito
+- `/blog` — Blog
+- `/admin` — Panel CMS
+
+## Licencia
+
+Proyecto privado — Coders Solution.

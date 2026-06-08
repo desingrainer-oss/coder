@@ -1,0 +1,88 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "slug": "como-elegir-sales-cloud-para-tu-empresa",
+      "title": "Cómo elegir Sales Cloud para tu empresa",
+      "excerpt": "Guía práctica para evaluar si Sales Cloud es la solución adecuada según el tamaño, industria y madurez digital de tu organización.",
+      "content": "Sales Cloud es la solución CRM más adoptada del ecosistema Salesforce, pero no todas las empresas la necesitan de la misma forma.\n\nEn esta guía repasamos los criterios clave para evaluar si Sales Cloud es la inversión correcta: tamaño del equipo comercial, complejidad del pipeline, integraciones necesarias y nivel de automatización deseado.\n\nTambién compartimos señales de alerta que indican que tu empresa necesita migrar o modernizar su CRM actual, y cómo un partner certificado puede acelerar la implementación.",
+      "category": "salesforce",
+      "categoryLabel": "Salesforce",
+      "author": "Equipo Coders Solution",
+      "publishedAt": "2025-11-15",
+      "status": "published",
+      "seoTitle": "Cómo elegir Sales Cloud para tu empresa | Coders Solution",
+      "seoDescription": "Guía para evaluar Sales Cloud según el tamaño, industria y madurez digital de tu organización."
+    },
+    {
+      "id": "2",
+      "slug": "5-errores-comunes-implementacion-salesforce",
+      "title": "5 errores comunes en la implementación de Salesforce",
+      "excerpt": "Evita los fallos más frecuentes que retrasan proyectos Salesforce y reducen la adopción del equipo.",
+      "content": "La implementación de Salesforce puede transformar tu operación, pero también puede fallar si no se planifica correctamente.\n\nLos cinco errores más comunes que vemos en proyectos son: no definir objetivos de negocio claros, personalizar en exceso desde el inicio, ignorar el change management, subestimar la integración con sistemas existentes y no medir la adopción post-go-live.\n\nEn este artículo explicamos cada error con ejemplos reales y cómo evitarlos con una metodología probada.",
+      "category": "implementacion",
+      "categoryLabel": "Implementación",
+      "author": "Equipo Coders Solution",
+      "publishedAt": "2025-10-28",
+      "status": "published",
+      "seoTitle": "5 errores comunes en implementación Salesforce",
+      "seoDescription": "Evita los fallos más frecuentes que retrasan proyectos Salesforce y reducen la adopción."
+    },
+    {
+      "id": "3",
+      "slug": "agentforce-ia-ventas-servicio",
+      "title": "Agentforce: cómo la IA transforma ventas y servicio",
+      "excerpt": "Descubre cómo los agentes de IA de Agentforce automatizan procesos y mejoran la experiencia del cliente 24/7.",
+      "content": "Agentforce representa un cambio de paradigma en cómo las empresas operan con Salesforce. Los agentes de IA no solo responden preguntas: actúan, deciden y completan tareas complejas de forma autónoma.\n\nEn ventas, Agentforce puede calificar leads, agendar reuniones y actualizar oportunidades. En servicio, resuelve consultas frecuentes, escala casos complejos y mantiene al cliente informado en todo momento.\n\nTe mostramos casos de uso concretos y cómo integrar Agentforce en tus CTAs y flujos de atención.",
+      "category": "ia",
+      "categoryLabel": "IA & Automatización",
+      "author": "Equipo Coders Solution",
+      "publishedAt": "2025-12-01",
+      "status": "published",
+      "seoTitle": "Agentforce: IA para ventas y servicio | Coders Solution",
+      "seoDescription": "Cómo los agentes de IA de Agentforce automatizan procesos y mejoran la experiencia del cliente."
+    },
+    {
+      "id": "4",
+      "slug": "financial-services-cloud-fintech",
+      "title": "Financial Services Cloud para fintechs y bancos digitales",
+      "excerpt": "Por qué las instituciones financieras eligen FSC para onboarding digital, cumplimiento y gestión de cartera.",
+      "content": "El sector financiero enfrenta desafíos únicos: regulación estricta, onboarding complejo y necesidad de visión 360° del cliente. Financial Services Cloud está diseñado específicamente para estas necesidades.\n\nCubrimos los módulos clave de FSC, flujos de KYC automatizados, integración con core banking y cómo fintechs como konfio han acelerado su crecimiento con esta solución.\n\nSi tu institución busca digitalizar sin comprometer el cumplimiento, este artículo es para ti.",
+      "category": "industria",
+      "categoryLabel": "Industria",
+      "author": "Equipo Coders Solution",
+      "publishedAt": "2025-09-20",
+      "status": "published",
+      "seoTitle": "Financial Services Cloud para fintechs",
+      "seoDescription": "Por qué fintechs y bancos eligen FSC para onboarding, cumplimiento y gestión de cartera."
+    },
+    {
+      "id": "5",
+      "slug": "manufacturing-cloud-cadena-suministro",
+      "title": "Manufacturing Cloud: visibilidad end-to-end en manufactura",
+      "excerpt": "Cómo Manufacturing Cloud mejora el forecasting, la gestión de partners y la planificación de producción.",
+      "content": "La manufactura requiere coordinación entre ventas, producción y distribución. Manufacturing Cloud conecta estos mundos en Salesforce.\n\nExploramos sales agreements, account-based forecasting, partner communities e integración con ERP para una visión completa de la cadena de valor.\n\nCompartimos resultados de implementaciones reales donde la precisión del forecast mejoró más del 30%.",
+      "category": "industria",
+      "categoryLabel": "Industria",
+      "author": "Equipo Coders Solution",
+      "publishedAt": "2025-08-14",
+      "status": "published",
+      "seoTitle": "Manufacturing Cloud: visibilidad en manufactura",
+      "seoDescription": "Cómo Manufacturing Cloud mejora forecasting, partners y planificación de producción."
+    },
+    {
+      "id": "6",
+      "slug": "casos-exito-salesforce-mexico",
+      "title": "Casos de éxito Salesforce en México: lecciones aprendidas",
+      "excerpt": "Lo que aprendimos implementando Salesforce para KAVAK, Grupo LALA, konfio y otras empresas líderes.",
+      "content": "Después de más de 50 implementaciones en México, hemos identificado patrones de éxito que se repiten en los mejores proyectos.\n\nLa alineación entre negocio y tecnología, la adopción temprana del equipo y la medición continua de resultados son los tres pilares que distinguen un proyecto exitoso.\n\nRepasamos casos concretos de automotriz, consumo masivo, fintech y manufactura con métricas reales de impacto.",
+      "category": "casos",
+      "categoryLabel": "Casos de éxito",
+      "author": "Equipo Coders Solution",
+      "publishedAt": "2025-07-05",
+      "status": "published",
+      "seoTitle": "Casos de éxito Salesforce en México",
+      "seoDescription": "Lecciones de implementaciones Salesforce para KAVAK, Grupo LALA, konfio y más."
+    }
+  ]
+}
