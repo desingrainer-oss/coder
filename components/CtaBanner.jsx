@@ -29,7 +29,7 @@ export default function CtaBanner({
         />
         <div className="absolute inset-0 bg-[#0a1628]/88" />
 
-        <div className="relative z-[1] flex items-center justify-between gap-8 py-11 px-8 md:px-12 lg:px-14">
+        <div className="relative z-[1] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 sm:gap-8 py-8 sm:py-11 px-6 sm:px-8 md:px-12 lg:px-14">
           <div className="max-w-[560px]">
             <h2 className="text-[26px] md:text-[28px] font-extrabold text-white mb-2.5 tracking-tight">
               {title}

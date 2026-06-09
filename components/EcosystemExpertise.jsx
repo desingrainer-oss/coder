@@ -64,12 +64,12 @@ function EcosystemItem({ item }) {
 
 export default function EcosystemExpertise() {
   return (
-    <div id="ecosistema" className="py-[72px] px-10 bg-white">
+    <div id="ecosistema" className="py-12 md:py-16 lg:py-[72px] px-4 sm:px-6 md:px-10 bg-white">
       <AnimateIn>
         <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-blue mb-2.5 text-center">
           ECOSISTEMA SALESFORCE
         </p>
-        <h2 className="text-[32px] font-extrabold text-navy mb-3 tracking-tight text-center">
+        <h2 className="text-[24px] sm:text-[28px] md:text-[32px] font-extrabold text-navy mb-3 tracking-tight text-center">
           Salesforce ecosystem expertise
         </h2>
         <p className="text-[15px] text-text-2 max-w-[720px] mx-auto mb-12 leading-[1.65] text-center">
@@ -78,7 +78,7 @@ export default function EcosystemExpertise() {
         </p>
       </AnimateIn>
 
-      <Stagger className="grid grid-cols-3 gap-8 max-w-[1240px] mx-auto" stagger={0.14}>
+      <Stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 max-w-[1240px] mx-auto" stagger={0.14}>
         {groups.map((group) => (
           <StaggerItem key={group.title}>            <h3 className="text-[13px] font-bold text-navy uppercase tracking-wide mb-4 pb-2 border-b border-border">
               {group.title}

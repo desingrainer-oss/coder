@@ -20,7 +20,7 @@ function SearchResults({ query }) {
         {posts.length} resultado{posts.length !== 1 ? "s" : ""} para &ldquo;{query}&rdquo;
       </p>
       {posts.length > 0 ? (
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {posts.map((post) => (
             <BlogCard key={post.id} post={post} />
           ))}
@@ -39,7 +39,7 @@ export default async function BlogSearchPage({ searchParams }) {
     <>
       <Navbar />
 
-      <div className="py-2.5 px-10 bg-bg border-b border-border text-[12.5px] text-text-3 flex items-center gap-1.5">
+      <div className="py-2.5 px-4 sm:px-6 md:px-10 bg-bg border-b border-border text-[12.5px] text-text-3 flex flex-wrap items-center gap-1.5">
         <Link href="/" className="text-blue">Inicio</Link>
         <span className="text-gray-300">›</span>
         <Link href="/blog" className="text-blue">Blog</Link>
@@ -47,8 +47,8 @@ export default async function BlogSearchPage({ searchParams }) {
         Buscar
       </div>
 
-      <div className="py-[72px] px-10">
-        <h1 className="text-[32px] font-extrabold text-navy mb-6 tracking-tight text-center">
+      <div className="py-12 md:py-16 lg:py-[72px] px-4 sm:px-6 md:px-10">
+        <h1 className="text-[24px] sm:text-[28px] md:text-[32px] font-extrabold text-navy mb-6 tracking-tight text-center">
           Buscar artículos
         </h1>
 

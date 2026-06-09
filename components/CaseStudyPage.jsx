@@ -14,7 +14,7 @@ export default function CaseStudyPage({ study }) {
     <>
       <Navbar />
 
-      <div className="py-2.5 px-10 bg-bg border-b border-border text-[12.5px] text-text-3 flex items-center gap-1.5">
+      <div className="py-2.5 px-4 sm:px-6 md:px-10 bg-bg border-b border-border text-[12.5px] text-text-3 flex flex-wrap items-center gap-1.5">
         <Link href="/" className="text-blue">Inicio</Link>
         <span className="text-gray-300">›</span>
         <Link href="/casos-de-exito" className="text-blue">Casos de éxito</Link>
@@ -24,14 +24,14 @@ export default function CaseStudyPage({ study }) {
 
       <div className="relative overflow-hidden">
         <div className="absolute inset-0" style={{ background: study.gradient }} />
-        <div className="relative z-[1] py-16 px-10 text-center">
+        <div className="relative z-[1] py-12 md:py-16 px-4 sm:px-6 md:px-10 text-center">
           <span className="inline-block bg-white/15 backdrop-blur-sm border border-white/20 rounded-full py-1 px-3 text-[10px] font-semibold text-white tracking-wider mb-4">
             {study.tag}
           </span>
           <div className={`inline-block bg-white rounded-lg py-2 px-5 font-black text-xl text-navy mb-6 ${study.logoSize}`}>
             {study.logo}
           </div>
-          <h1 className="text-[36px] font-extrabold text-white mb-4 tracking-tight leading-tight max-w-[700px] mx-auto">
+          <h1 className="text-[26px] sm:text-[32px] md:text-[36px] font-extrabold text-white mb-4 tracking-tight leading-tight max-w-[700px] mx-auto">
             {study.title}
           </h1>
           <p className="text-[15px] text-white/75 max-w-[560px] mx-auto leading-relaxed">
@@ -40,17 +40,17 @@ export default function CaseStudyPage({ study }) {
         </div>
       </div>
 
-      <div className="bg-navy grid grid-cols-3 divide-x divide-white/[0.08]">
+      <div className="bg-navy grid grid-cols-1 sm:grid-cols-3 sm:divide-x divide-y sm:divide-y-0 divide-white/[0.08]">
         {study.metrics.map((m) => (
-          <div key={m.l} className="py-8 px-6 text-center">
-            <div className="text-[36px] font-extrabold text-blue-light leading-none">{m.v}</div>
+          <div key={m.l} className="py-6 sm:py-8 px-4 sm:px-6 text-center">
+            <div className="text-[28px] sm:text-[36px] font-extrabold text-blue-light leading-none">{m.v}</div>
             <div className="text-[13px] text-white/55 mt-2">{m.l}</div>
           </div>
         ))}
       </div>
 
-      <div className="py-[72px] px-10">
-        <div className="grid grid-cols-[1fr_280px] gap-10 max-w-[1100px] mx-auto">
+      <div className="py-12 md:py-16 lg:py-[72px] px-4 sm:px-6 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8 lg:gap-10 max-w-[1100px] mx-auto">
           <div>
             <section className="mb-10">
               <h2 className="text-xl font-extrabold text-navy mb-4">El desafío</h2>

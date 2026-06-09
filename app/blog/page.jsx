@@ -19,15 +19,15 @@ export default function BlogPage() {
     <>
       <Navbar />
 
-      <div className="py-2.5 px-10 bg-bg border-b border-border text-[12.5px] text-text-3">
+      <div className="py-2.5 px-4 sm:px-6 md:px-10 bg-bg border-b border-border text-[12.5px] text-text-3">
         Inicio › Blog
       </div>
 
-      <div className="py-[72px] px-10">
+      <div className="py-12 md:py-16 lg:py-[72px] px-4 sm:px-6 md:px-10">
         <p className="text-[11px] font-bold tracking-[1.5px] uppercase text-blue mb-2.5 text-center">
           RECURSOS
         </p>
-        <h1 className="text-[32px] font-extrabold text-navy mb-3 tracking-tight text-center">
+        <h1 className="text-[24px] sm:text-[28px] md:text-[32px] font-extrabold text-navy mb-3 tracking-tight text-center">
           Blog Coders Solution
         </h1>
         <p className="text-[15px] text-text-2 max-w-[600px] mx-auto mb-8 leading-[1.65] text-center">
@@ -51,7 +51,7 @@ export default function BlogPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {posts.map((post) => (
             <BlogCard key={post.id} post={post} />
           ))}

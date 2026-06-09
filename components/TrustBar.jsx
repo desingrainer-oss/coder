@@ -32,17 +32,60 @@ const certPills = [
   { label: "MuleSoft", color: "#00B3A4" },
 ];
 
-const logos = [
-  { name: "Grupo Impresor", className: "text-[12px] font-bold text-gray-600" },
-  { name: "Ganac", className: "text-sm font-bold text-[#0d9488]" },
-  { name: "Probemedic", className: "text-[12px] font-semibold text-gray-600" },
-  { name: "Elohim", className: "text-sm font-bold italic text-gray-700" },
-  { name: "Meylogistics", className: "text-[12px] font-bold text-[#c2410c]" },
-  { name: "NeoRed", className: "text-sm font-bold text-[#4338ca]" },
-  { name: "Sejo", className: "text-sm font-semibold text-gray-600" },
-  { name: "BL Real Estate", className: "text-[11px] font-bold text-gray-700" },
-  { name: "WeBuild", className: "text-sm font-extrabold text-navy" },
+const clientLogos = [
+  { name: "Ganac", src: "/clients/ganac.webp", href: "https://ganac.org.mx/", height: 48 },
+  { name: "Pacific Life", src: "/clients/pacific-life.webp", href: "https://pacificglob.com/es/inicio/", height: 44 },
+  { name: "Innovak Global", src: "/clients/innovak-global.webp", height: 50 },
+  { name: "Regias Hamburguesas", src: "/clients/regias.webp", height: 52 },
+  { name: "Jn Bank", src: "/clients/jn-bank.webp", height: 44 },
+  { name: "Fintech México", src: "/clients/fintech-mexico.webp", height: 48 },
 ];
+
+function ClientLogoItem({ logo }) {
+  const image = (
+    <Image
+      src={logo.src}
+      alt={logo.name}
+      width={220}
+      height={logo.height}
+      className="h-11 sm:h-12 md:h-14 w-auto max-w-[150px] sm:max-w-[170px] md:max-w-[190px] object-contain"
+    />
+  );
+
+  if (logo.href) {
+    return (
+      <a
+        href={logo.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="shrink-0 px-3 sm:px-4"
+        title={logo.name}
+      >
+        {image}
+      </a>
+    );
+  }
+
+  return (
+    <div className="shrink-0 px-3 sm:px-4" title={logo.name}>
+      {image}
+    </div>
+  );
+}
+
+function ClientLogoMarquee() {
+  const loop = [...clientLogos, ...clientLogos];
+
+  return (
+    <div className="overflow-hidden w-full logo-marquee-mask" aria-label="Empresas que confían en Coders Solution">
+      <div className="logo-marquee-track items-center gap-2 sm:gap-3">
+        {loop.map((logo, index) => (
+          <ClientLogoItem key={`${logo.name}-${index}`} logo={logo} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 function CertModal({ open, onClose }) {
   useEffect(() => {
@@ -115,9 +158,9 @@ export default function TrustBar() {
 
   return (
     <>
-      <AnimateOnMount className="relative z-20 -mt-14 px-6 md:px-10 lg:px-12 mb-2" delay={0.35} y={32}>
+      <AnimateOnMount className="relative z-20 -mt-8 sm:-mt-10 md:-mt-14 px-4 sm:px-6 md:px-10 lg:px-12 mb-2" delay={0.35} y={32}>
         <div className="max-w-[1240px] mx-auto">
-          <div className="bg-white rounded-[28px] border border-border/70 shadow-[0_-2px_20px_rgba(0,0,0,0.04),0_12px_40px_rgba(0,0,0,0.07)] px-8 md:px-10 py-6 md:py-7 flex flex-col lg:flex-row items-stretch gap-6 lg:gap-0">
+          <div className="bg-white rounded-[20px] sm:rounded-[28px] border border-border/70 shadow-[0_-2px_20px_rgba(0,0,0,0.04),0_12px_40px_rgba(0,0,0,0.07)] px-5 sm:px-8 md:px-10 py-5 sm:py-6 md:py-7 flex flex-col lg:flex-row items-stretch gap-6 lg:gap-0">
             {/* Partner Salesforce */}
             <div className="flex items-center justify-center lg:justify-start shrink-0 lg:pr-8 lg:border-r lg:border-border">
               <div className="text-center flex flex-col items-center min-w-[100px]">
@@ -180,16 +223,7 @@ export default function TrustBar() {
               <p className="text-[10px] font-bold text-navy tracking-[0.08em] uppercase mb-3">
                 Empresas que confían en Coders Solution
               </p>
-              <div className="flex items-center gap-5 md:gap-6 flex-wrap">
-                {logos.map((logo) => (
-                  <span
-                    key={logo.name}
-                    className={`tracking-tight transition-colors hover:text-navy whitespace-nowrap ${logo.className}`}
-                  >
-                    {logo.name}
-                  </span>
-                ))}
-              </div>
+              <ClientLogoMarquee />
             </div>
           </div>
         </div>

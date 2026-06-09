@@ -152,9 +152,9 @@ export default function ChatWidget() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end gap-2.5">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] flex flex-col items-end gap-2.5 max-w-[calc(100vw-2rem)]">
       <div
-        className={`bg-white rounded-[14px] w-[320px] shadow-chat border-[1.5px] border-border flex-col overflow-hidden ${
+        className={`bg-white rounded-[14px] w-full sm:w-[320px] shadow-chat border-[1.5px] border-border flex-col overflow-hidden ${
           isOpen ? "flex" : "hidden"
         }`}
       >

@@ -57,19 +57,19 @@ const cards = [
 
 export default function HowWeHelp() {
   return (
-    <div className="py-[72px] px-10 bg-[#f8fafc]">
+    <div className="py-12 md:py-16 lg:py-[72px] px-4 sm:px-6 md:px-10 bg-[#f8fafc]">
       <AnimateIn>
         <h2 className="text-[13px] font-extrabold tracking-[1.5px] uppercase text-navy mb-10 text-center">
           CÓMO AYUDAMOS A LAS EMPRESAS A ESCALAR CON SALESFORCE
         </h2>
       </AnimateIn>
 
-      <Stagger className="grid grid-cols-3 gap-6 max-w-[1240px] mx-auto" stagger={0.12}>
+      <Stagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 max-w-[1240px] mx-auto" stagger={0.12}>
         {cards.map((card) => (
           <StaggerItem key={card.href}>
             <Link
               href={card.href}
-              className="group bg-white border border-border rounded-2xl py-8 px-7 shadow-card card-lift cursor-pointer hover:shadow-card-lg hover:border-blue/20 flex items-start gap-7 relative overflow-hidden h-full min-h-[200px]"
+              className="group bg-white border border-border rounded-2xl py-6 md:py-8 px-5 md:px-7 shadow-card card-lift cursor-pointer hover:shadow-card-lg hover:border-blue/20 flex flex-col sm:flex-row items-start gap-5 sm:gap-7 relative overflow-hidden h-full min-h-[200px]"
             >
             <div className="absolute left-0 top-6 bottom-6 w-[3px] bg-blue rounded-r-full" />
 

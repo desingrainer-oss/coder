@@ -38,6 +38,34 @@
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
+  .logo-marquee-mask {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+    mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+  }
+}
+
+@keyframes logo-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: logo-marquee 36s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee-track {
+    animation: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+  }
 }
 
 /* Component styles */
@@ -225,4 +253,14 @@
 
 .logo-blend {
   mix-blend-mode: screen;
+}
+
+/* En móvil el navbar es opaco: el blend contra el hero hace desaparecer el logo */
+.logo-blend-lg {
+  mix-blend-mode: normal;
+}
+@media (min-width: 1024px) {
+  .logo-blend-lg {
+    mix-blend-mode: screen;
+  }
 }

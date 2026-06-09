@@ -16,7 +16,7 @@ export default function ProductPageClient({ product }) {
     <>
       <Navbar />
 
-      <div className="py-2.5 px-10 bg-bg border-b border-border text-[12.5px] text-text-3 flex items-center gap-1.5">
+      <div className="py-2.5 px-4 sm:px-6 md:px-10 bg-bg border-b border-border text-[12.5px] text-text-3 flex flex-wrap items-center gap-1.5">
         <Link href="/" className="text-blue">Inicio</Link>
         <span className="text-gray-300">›</span>
         Soluciones
@@ -24,10 +24,10 @@ export default function ProductPageClient({ product }) {
         {product.title}
       </div>
 
-      <div className="grid grid-cols-2 min-h-[300px] bg-white">
-        <div className="py-[52px] px-10 flex flex-col justify-center">
+      <div className="grid grid-cols-1 lg:grid-cols-2 min-h-0 lg:min-h-[300px] bg-white">
+        <div className="py-10 md:py-[52px] px-4 sm:px-6 md:px-10 flex flex-col justify-center order-2 lg:order-1">
           <span className="text-[11px] font-bold tracking-[1.5px] uppercase text-blue mb-3 block">{product.tag}</span>
-          <h1 className="text-[40px] font-extrabold text-navy mb-3.5 tracking-tight leading-tight">
+          <h1 className="text-[28px] sm:text-[34px] md:text-[40px] font-extrabold text-navy mb-3.5 tracking-tight leading-tight">
             {product.title}
             <br />
             <span className="text-blue">con Coders Solution</span>
@@ -35,7 +35,7 @@ export default function ProductPageClient({ product }) {
           <p className="text-[14.5px] text-text-2 max-w-[400px] leading-[1.65] mb-6">{product.desc}</p>
           <button className="btn btn-blue w-fit" onClick={() => openChat({ mode: "calendar" })}>Agenda una consultoría →</button>
         </div>
-        <div className="sol-hero-right-bg relative py-8 px-10 flex items-center justify-center bg-bg">
+        <div className="sol-hero-right-bg relative py-8 px-4 sm:px-6 md:px-10 flex items-center justify-center bg-bg order-1 lg:order-2">
           <div className="bg-white border-[1.5px] border-border rounded-[14px] p-5 w-full max-w-[380px] shadow-card-lg">
             <div className="flex items-center gap-2.5 mb-4">
               <div
@@ -75,12 +75,12 @@ export default function ProductPageClient({ product }) {
         </div>
       </div>
 
-      <div className="grid grid-cols-[1fr_260px] px-10">
-        <div className="pr-8">
+      <div className="grid grid-cols-1 lg:grid-cols-[1fr_260px] px-4 sm:px-6 md:px-10">
+        <div className="lg:pr-8">
           <AnimateIn>
           <div className="py-12 border-b border-border">
             <h2 className="text-lg font-extrabold text-navy text-center mb-7">¿Qué problemas resolvemos?</h2>
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {product.problems.map(([icon, text]) => (
                 <div key={text} className="text-center">
                   <div className="w-11 h-11 rounded-[11px] bg-bg2 flex items-center justify-center mx-auto mb-2">
@@ -94,7 +94,7 @@ export default function ProductPageClient({ product }) {
 
           <div className="py-12 border-b border-border">
             <h2 className="text-lg font-extrabold text-navy text-center mb-7">¿Cómo ayudamos?</h2>
-            <div className="grid grid-cols-5 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
               {product.how.map(([icon, title, desc]) => (
                 <div key={title} className="text-center">
                   <div
@@ -112,7 +112,7 @@ export default function ProductPageClient({ product }) {
 
           <div className="py-12">
             <h2 className="text-lg font-extrabold text-navy text-center mb-7">Beneficios para tu negocio</h2>
-            <div className="grid grid-cols-4 gap-3.5 mb-8">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 mb-8">
               {benefitIcons.map((b) => (
                 <div key={b} className="bg-bg rounded-[10px] py-4 px-2.5 text-center">
                   <div className="mb-2 flex justify-center">
@@ -122,7 +122,7 @@ export default function ProductPageClient({ product }) {
                 </div>
               ))}
             </div>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
               <div className="bg-bg border-[1.5px] border-border rounded-[10px] p-[22px]">
                 <h3 className="text-sm font-bold text-navy mb-3.5">Beneficios para tu negocio</h3>
                 {product.benefits.map((b) => (
@@ -154,7 +154,7 @@ export default function ProductPageClient({ product }) {
           </AnimateIn>
         </div>
 
-        <div className="py-9 pl-6 border-l border-border sticky top-16 h-fit self-start">
+        <div className="hidden lg:block py-9 pl-6 border-l border-border sticky top-16 h-fit self-start">
           <div className="bg-white border-[1.5px] border-border rounded-[10px] p-4">
             <h4 className="text-[10.5px] font-bold text-gray-400 uppercase tracking-widest mb-3">Tecnologías relacionadas</h4>
             {product.techs.map(([color, name]) => (

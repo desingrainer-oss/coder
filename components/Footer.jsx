@@ -20,9 +20,9 @@ export default function Footer({ compact = false }) {
   const visibleSocial = socialLinks.filter((s) => !compact || !s.hideOnCompact);
 
   return (
-    <footer className="bg-navy text-white/60 py-14 px-10 pb-6">
+    <footer className="bg-navy text-white/60 py-10 md:py-14 px-4 sm:px-6 md:px-10 pb-6">
       <AnimateIn y={16}>
-      <div className="grid grid-cols-[2fr_1fr_1fr_1fr] gap-10 mb-12">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[2fr_1fr_1fr_1fr] gap-8 lg:gap-10 mb-10 md:mb-12">
         <div>
           <Logo className="h-14" />
           <p className="text-[12.5px] text-white/50 max-w-[240px] leading-relaxed mt-2.5">
@@ -100,7 +100,7 @@ export default function Footer({ compact = false }) {
         </div>
       </div>
 
-      <div className="border-t border-white/[0.07] pt-5 flex justify-between items-center text-[11.5px] text-white/35">
+      <div className="border-t border-white/[0.07] pt-5 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 text-[11.5px] text-white/35">
         <span>
           {compact
             ? "© 2025 Coders Solution."

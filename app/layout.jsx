@@ -13,6 +13,10 @@ export const metadata = {
   title: "Coders Solution – Partner Oficial Salesforce",
   description:
     "Partner Oficial de Salesforce. Implementamos, optimizamos y escalamos Salesforce para empresas.",
+  icons: {
+    icon: [{ url: "/favicon.png", type: "image/png" }],
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
